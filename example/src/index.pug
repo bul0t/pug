@@ -1,1 +1,13 @@
-extends pug/templates/main
+doctype html
+html(lang='ru')
+head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title PUG Название страниц
+    link(href=require('styles.scss') rel='stylesheet')
+body
+    .wrapper
+
+        p!= 'This code is' + ' <strong>not</strong> escaped!'
+
+    script(src=require('js/scripts.js'))
