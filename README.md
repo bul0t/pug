@@ -7,6 +7,25 @@ Pug в себя включает:
 - переменные
 - циклы и мн.др.
 
+Исходный код:
+
+    doctype html
+    html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title PUG Название страниц
+        link(href=require('styles.scss') rel='stylesheet')
+    body
+        .wrapper
+            .header
+                h1 Заголовок
+            .content
+                img(src=require('img/bmw.jpg'))
+            .footer Copyright
+        script(src=require('js/scripts.js'))
+
+
 ## Основные моменты работы
 
 - вложенность тегов, через табуляцию

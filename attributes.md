@@ -1,4 +1,4 @@
-# attributes
+# Attributes
 https://pugjs.org/language/attributes.html
 
 Создаём атрибуты тегов в Pug.

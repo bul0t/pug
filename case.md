@@ -1,4 +1,4 @@
-# case
+# Case
 https://pugjs.org/language/case.html
 
 Оператор case - это сокращение от оператора switch в JavaScript.
