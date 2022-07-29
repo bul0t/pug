@@ -1,6 +1,42 @@
 body {
-    background-color: gray;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #eee;
 }
-img {
-    width: 400px;
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.list {
+  display: inline-block;
+  background-color: #ddd;
+  margin: 0;
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+
+// Сообщение
+.message__wrap {
+  background-color: #fff;
+  display: flex;
+  margin: 0 auto;
+  width: 700px;
+  border-radius: 8px;
+  padding: 16px;
+}
+.message__img {
+  display: flex;
+  margin-right: 16px;
+  img {
+    border-radius: 8px;
+  }
+}
+.message__head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.message__name {
+  a {
+    color: #333;
+  }
 }

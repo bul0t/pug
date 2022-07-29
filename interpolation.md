@@ -6,9 +6,14 @@ https://pugjs.org/language/interpolation.html
 
     - var title = "Название страницы";
     - var author = "Иван";
-    - var theGreat = "<span>Экранирование</span>";
+    - var theGreat = "<b>жирный</b>";
 
     h1= title
+    h1= "Имя: " + author
+
+    p= theGreat  // скобки тегов видны
+    p!= theGreat // скобки тегов не видны, текст жирный
+
     p Автор #{author}
     p #{theGreat}
 

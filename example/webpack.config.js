@@ -2,9 +2,9 @@ const path = require('path');
 const PugPlugin = require('pug-plugin');
 
 module.exports = {
-    mode: 'development',   // развернутый код
+    // mode: 'development',   // развернутый код
     // mode: 'production', // сжатый
-    // mode: 'none',       // без режима
+    mode: 'none',       // без режима
     devtool: 'source-map',
     devServer: {
         static: {
@@ -13,7 +13,7 @@ module.exports = {
         watchFiles: {
             paths: ['src/**/*.*'], 
             options: {
-                // usePolling: true, // false можно убрать параметр
+                usePolling: true, // false можно убрать параметр
             },
         },
     },

@@ -1,17 +1,39 @@
 doctype html
 html(lang='ru')
-head
+  head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    title PUG Название страниц
+    title Список дел
     link(href=require('styles.scss') rel='stylesheet')
-body
+  body
     .wrapper
+      h1 Список дел
+      ul.list
+        li Завтрак
+        li Обед
+        li Ужин
+      
+      p.
+        Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit.
 
-        | Первая строка
-        |
-        button Вторая строка
-        |
-        | Третья строка
+      .message
+        .message__wrap
+          .message__img
+            img(src="https://picsum.photos/128")
+          .message__content
+            .message__head
+              .message__name
+                a(href="#") Иван Иванов
+                |  (5)
+              .message__date 01.01.2001
+            .message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas provident reprehenderit doloribus sunt consequuntur necessitatibus non pariatur dignissimos mollitia nisi, animi iste harum iusto?
+
+      - const obj = []
+
+      each item, i in arr
+        p Элемент #{i+1}: #{item}
+      else
+        p Нет элементов
 
     script(src=require('js/scripts.js'))
