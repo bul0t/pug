@@ -1,39 +1,80 @@
+include ./pug/mixins/yoga-studio-card
+
 doctype html
 html(lang='ru')
   head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     title Список дел
+    link(href="http://yoga.cy09425.tmweb.ru/local/templates/chaturanga-3/assets/css/main.min.css?1657445222308339" rel="stylesheet")
     link(href=require('styles.scss') rel='stylesheet')
   body
-    .wrapper
-      h1 Список дел
-      ul.list
-        li Завтрак
-        li Обед
-        li Ужин
-      
-      p.
-        Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit.
 
-      .message
-        .message__wrap
-          .message__img
-            img(src="https://picsum.photos/128")
-          .message__content
-            .message__head
-              .message__name
-                a(href="#") Иван Иванов
-                |  (5)
-              .message__date 01.01.2001
-            .message__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas provident reprehenderit doloribus sunt consequuntur necessitatibus non pariatur dignissimos mollitia nisi, animi iste harum iusto?
+    main.main.main--yoga-studio
+      .container
 
-      - const obj = []
+        .breadcrumbs
+          ul.breadcrumbs__list
+            li.breadcrumbs__item
+              a.breadcrumbs__link(href="/") Главная
+            li.breadcrumbs__item
+              span.breadcrumbs__link.is-active Йога-студии
 
-      each item, i in arr
-        p Элемент #{i+1}: #{item}
-      else
-        p Нет элементов
+        h1.sect__title Йога-студии
+        .description-layout #[span Макет №1:] Йога-студии Москва (базовая-1) и другие регионы
+
+        .tab__controls
+          a.btn__shadow.is-active(href="#") Москва #[span(class="tab__controls-amount") 44]
+          a.btn__shadow(href="#") Вся Россия #[span(class="tab__controls-amount") 62]
+          a.btn__shadow(href="#") СНГ #[span(class="tab__controls-amount") 12]
+          a.btn__shadow(href="#") Азия #[span(class="tab__controls-amount") 8]
+          a.btn__shadow(href="#") Африка #[span(class="tab__controls-amount") 5]
+          a.btn__shadow(href="#") Европа #[span(class="tab__controls-amount") 6]
+          a.btn__shadow(href="#") Австралия и Океания #[span(class="tab__controls-amount") 6]
+          a.btn__shadow(href="#") Северная Америка #[span(class="tab__controls-amount") 6]
+          a.btn__shadow(href="#") Южная Америка #[span(class="tab__controls-amount") 6]
+
+        .choose-city
+          .choose-city__title Выбрать город
+          .choose-city__search
+            form.choose-city__form
+              input.choose-city__input(type="search" placeholder="Название")
+              input.choose-city__submit(type="image" src=require("img/choose-city__submit.png"))
+
+        .popular-cities
+          .popular-cities__title Популярные города
+          <div class="popular-cities__list">
+            <ul>
+              <li>Санкт-Петербург</li>
+              <li>Краснодар</li>
+              <li>Новороссийск</li>
+            </ul>
+            <ul>
+              <li>Казань</li>
+              <li>Екатеринбург</li>
+              <li>Рязань</li>
+            </ul>
+            <ul>
+              <li>Нижний Новгород</li>
+              <li>Иркутск</li>
+              <li>Якутск</li>
+            </ul>
+            <ul>
+              <li>Волгоград</li>
+              <li>Новосибирск</li>
+              <li>Хабаровск</li>
+            </ul>
+          </div>
+
+        .yoga-studios-map
+          img(src=require("img/yoga-studios-map.png"))
+
+        .yoga-studio-title
+          span.yoga-studio-title__geo Москва
+          span.yoga-studio-title__amount 44
+
+        .yoga-studio-card-grid
+          - for (var x = 0; x < 5; x++)
+            +yogaStudioCard
 
     script(src=require('js/scripts.js'))

@@ -1,7 +1,7 @@
 # Mixins
 https://pugjs.org/language/mixins.html
 
-Миксины позволяют создавать повторяющиеся блоки, схожи с функциями в языках програмирования.
+Миксины позволяют создавать повторяющиеся блоки, схожи с функциями в языках програмирования. Миксины можно использовать в разных частях разметки, например создать верхнее и нижнее меню, используя один миксин и разные данные.
 
 Создаём миксин списка, вызываем его два раза:
 
@@ -21,13 +21,27 @@ https://pugjs.org/language/mixins.html
     mixin pet(name)
         li.pet= name
         // li #{name} или так
-    
+
     ul
         +pet('cat')
         +pet('dog')
         +pet('pig')
 
 В миксинах можно использовать блоки.
+
+    mixin accentBlock(title)
+        .accent-block
+            if(title)
+                .head= title
+
+            .content
+                block
+
+    +accentBlock
+        p Текст
+
+    +accentBlock("Заголовок")
+        a(href="#") Ссылка
 
 В миксинах можно использовать атрибуты:
 
@@ -58,3 +72,57 @@ https://pugjs.org/language/mixins.html
                 li= item
 
     +list('my-list', 1, 2, 3, 4)
+
+## Пример, создаём меню
+
+    // создание миксина
+    mixin menu
+        ul.menu
+            li.menu__item
+                a.menu__link(href="#") Главная
+            li.menu__item
+                a.menu__link(href="#") О компании
+            li.menu__item
+                a.menu__link(href="#") Контакты
+
+    // вызов миксина
+    +menu
+    hr
+    +menu
+
+### Миксин с параметрами
+
+    // создание миксина
+    mixin menu(main, company, contact)
+        ul.menu
+            li.menu__item
+                a.menu__link(href="#")= main
+            li.menu__item
+                a.menu__link(href="#")= company
+            li.menu__item
+                a.menu__link(href="#")= contact
+
+    // вызов миксина
+    +menu("Главная", "О компании", "Контакты")
+    hr
+    +menu("Главная", "О нас", "Контакты")
+
+### Миксин с ...rest параметром
+
+    // создание миксина
+    mixin menu(...arrLi)
+        ul.menu
+            each li in arrLi
+                li.menu__item
+                a.menu__link(href="#")= li
+
+    // вызов миксина
+    +menu("Главная", "О компании", "Контакты")
+    hr
+    +menu("Главная", "О нас", "Контакты")
+
+### Абрибуты миксина `&attributes`
+
+    ul.menu(class=attributes.class)
+
+    +menu("Главная", "О компании", "Контакты")(class="hello")

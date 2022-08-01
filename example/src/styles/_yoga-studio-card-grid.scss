@@ -1,0 +1,13 @@
+/* yoga-studio-card-grid */
+.yoga-studio-card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+/* max-width: 1178px */
+@media (max-width: 1178px) {
+    .yoga-studio-card-grid {
+        justify-content: center;
+    }
+}

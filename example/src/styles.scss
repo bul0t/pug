@@ -1,42 +1,103 @@
-body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #eee;
+@import 'styles/description-layout';
+@import 'styles/tab__controls';
+@import 'styles/choose-city';
+@import 'styles/yoga-studios-map';
+@import 'styles/yoga-studio-title';
+@import 'styles/yoga-studio-card-grid';
+@import 'styles/yoga-studio-card';
+
+/**
+* МАКЕТ №1 : Йога-студии Москва (базовая) и другие регионы
+*/
+
+/**
+* МАКЕТ №3 : Йога-студии Вся Россия
+*/
+.popular-cities {
+  display: flex;
+  align-items: center;
+  margin-bottom: 37px;
 }
-.wrapper {
-  width: 1200px;
-  margin: 0 auto;
+.popular-cities__title {
+  color: #0C0C0C;
+  font-weight: 400;
+  font-size: 18px;
+  margin-right: 55px;
 }
-.list {
-  display: inline-block;
-  background-color: #ddd;
-  margin: 0;
-  padding: 16px 24px;
-  border-radius: 8px;
+.popular-cities__list {
+  display: flex;
+}
+.popular-cities__list ul {
+  margin-right: 96px;
+}
+.popular-cities__list li {
+  color: #4F4F4F;
+  margin-bottom: 8px;
 }
 
-// Сообщение
-.message__wrap {
-  background-color: #fff;
-  display: flex;
-  margin: 0 auto;
-  width: 700px;
-  border-radius: 8px;
-  padding: 16px;
-}
-.message__img {
-  display: flex;
-  margin-right: 16px;
-  img {
-    border-radius: 8px;
+/* Пока не превышает 1200px */
+@media (max-width: 1200px) {
+  .popular-cities {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .popular-cities__title {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  .popular-cities__list {
+    flex-wrap: wrap;
+  }
+  .popular-cities__list ul {
+    margin-right: 32px;
   }
 }
-.message__head {
+
+/**
+* МАКЕТ №5 : Йога-студии Студия
+*/
+.yoga-studio-card--map {
+  background-color: #fff;
+  width: auto;
+  min-width: 333px;
+  height: auto;
+  margin-right: 0;
+  margin-bottom: 0;
+  border-radius: 0 5px 5px 0;
+
+  padding: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+
+}
+.yoga-studio-card--map .yoga-studio-card:hover {
+  box-shadow: 0px 11px 35px rgba(0, 0, 0, 0.1);
+}
+.yoga-studio-card--map .yoga-studio-card__wrap {
+  display: flex;
+  flex-direction: column;
+}
+.yoga-studio-card--map .yoga-studio-card__image-wrap {
+  margin-right: 0;
+  flex-shrink: 0;
+}
+.yoga-studio-card--map .yoga-studio-card__image {
+  border-radius: 5px;
   margin-bottom: 16px;
 }
-.message__name {
-  a {
-    color: #333;
-  }
+
+.yoga-studio-card--map .yoga-studio-card__about {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 16px;
+}
+.yoga-studio-card--map .yoga-studio-card__about-link {
+  color: #4F4F4F;
+  font-size: 18px;
+  font-weight: 600;
+}
+.yoga-studio-card--map .yoga-studio-card__about-link:hover {
+  color: #FF8C00;
 }

@@ -44,6 +44,7 @@ https://pugjs.org/language/attributes.html
 
     a(style='color: red')
     a(style={color: 'red', background: 'green'})
+    a(style={"background-color": 'green'})
 
 ## Атрибуты класса
 Можно добавлять как обычные атрибуты или ввиде массива:

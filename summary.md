@@ -106,3 +106,46 @@ each (работа с массивами):
         p Элемент #{i+1}: #{item}
     else
         p Нет элементов
+
+each (работа с объектами):
+
+    - const obj = { key1: "val 1", key2: "val 2", key3: "val 3" }
+
+    each value, key in obj
+        p Ключ (#{key}): значение (#{value})
+    else
+        p Нет элементов
+
+## Checked
+Задаём checked через переменную (ctrl + f5 для проверки):
+
+    - let isChecked = false
+    input(type="checkbox", checked=isChecked)
+
+## `&attributes` - aтрибуты в виде объекта
+
+    - let attrs = { title: 'Контент', class: 'content' }
+    p&attributes(attrs) Контент
+
+## Массив классов
+
+    - let classes = ['content', 'element', 'btn']
+    p(class=classes) Массив классов
+
+## Объект классов
+
+    - let classes = { content: true, element: false, btn: true }
+    p(class=classes) Объект классов
+
+## Миксины
+
+    //- Declaration
+    mixin list
+        ul
+            li foo
+            li bar
+            li baz
+
+    //- Use
+    +list
+    +list

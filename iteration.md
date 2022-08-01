@@ -1,5 +1,10 @@
 # Iteration
-Циклы Pug: each, while.
+Циклы Pug: each, while, for.
+
+## for
+
+    - for (var x = 0; x < 5; x++)
+        +yogaStudioCard
 
 ## each
 Итерация по массивам и объектам.
