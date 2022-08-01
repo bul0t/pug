@@ -1,6 +1,7 @@
 @import 'styles/description-layout';
 @import 'styles/tab__controls';
 @import 'styles/choose-city';
+@import 'styles/popular-cities';
 @import 'styles/yoga-studios-map';
 @import 'styles/yoga-studio-title';
 @import 'styles/yoga-studio-card-grid';
@@ -9,49 +10,6 @@
 /**
 * МАКЕТ №1 : Йога-студии Москва (базовая) и другие регионы
 */
-
-/**
-* МАКЕТ №3 : Йога-студии Вся Россия
-*/
-.popular-cities {
-  display: flex;
-  align-items: center;
-  margin-bottom: 37px;
-}
-.popular-cities__title {
-  color: #0C0C0C;
-  font-weight: 400;
-  font-size: 18px;
-  margin-right: 55px;
-}
-.popular-cities__list {
-  display: flex;
-}
-.popular-cities__list ul {
-  margin-right: 96px;
-}
-.popular-cities__list li {
-  color: #4F4F4F;
-  margin-bottom: 8px;
-}
-
-/* Пока не превышает 1200px */
-@media (max-width: 1200px) {
-  .popular-cities {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .popular-cities__title {
-    margin-right: 0;
-    margin-bottom: 16px;
-  }
-  .popular-cities__list {
-    flex-wrap: wrap;
-  }
-  .popular-cities__list ul {
-    margin-right: 32px;
-  }
-}
 
 /**
 * МАКЕТ №5 : Йога-студии Студия

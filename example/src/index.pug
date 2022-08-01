@@ -43,31 +43,28 @@ html(lang='ru')
 
         .popular-cities
           .popular-cities__title Популярные города
-          <div class="popular-cities__list">
-            <ul>
-              <li>Санкт-Петербург</li>
-              <li>Краснодар</li>
-              <li>Новороссийск</li>
-            </ul>
-            <ul>
-              <li>Казань</li>
-              <li>Екатеринбург</li>
-              <li>Рязань</li>
-            </ul>
-            <ul>
-              <li>Нижний Новгород</li>
-              <li>Иркутск</li>
-              <li>Якутск</li>
-            </ul>
-            <ul>
-              <li>Волгоград</li>
-              <li>Новосибирск</li>
-              <li>Хабаровск</li>
-            </ul>
-          </div>
+          .popular-cities__list
+            ul
+              li Санкт-Петербург
+              li Краснодар
+              li Новороссийск
+            ul
+              li Казань
+              li Екатеринбург
+              li Рязань
+            ul
+              li Нижний Новгород
+              li Иркутск
+              li Якутск
+            ul
+              li Волгоград
+              li Новосибирск
+              li Хабаровск
 
         .yoga-studios-map
-          img(src=require("img/yoga-studios-map.png"))
+          .yoga-studios-map__map
+            img(src=require("img/yoga-studios-map.png") width="1138" height="586")
+          +yogaStudioCard("yoga-studio-card--map")
 
         .yoga-studio-title
           span.yoga-studio-title__geo Москва
