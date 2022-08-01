@@ -1,0 +1,36 @@
+/* yoga-studio-card--map */
+.yoga-studio-card--map {
+    width: auto;
+    min-width: 333px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 0;
+    border-radius: 0 5px 5px 0;
+
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.yoga-studio-card--map .yoga-studio-card__wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.yoga-studio-card--map .yoga-studio-card__image-wrap {
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.yoga-studio-card--map .yoga-studio-card__image {
+    border-radius: 5px;
+    margin-bottom: 16px;
+}
+
+.yoga-studio-card--map .yoga-studio-card__about {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 16px;
+}

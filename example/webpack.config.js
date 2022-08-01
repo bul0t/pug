@@ -23,7 +23,7 @@ module.exports = {
     output: {
         clean: true,
         path: path.join(__dirname, 'dist/'),
-        publicPath: '/',
+        // publicPath: '/',
         filename: 'js/common.js'
         // assetModuleFilename: 'assets/[name][ext]'
     },
