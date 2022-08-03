@@ -170,4 +170,4 @@
         fs.writeFileSync('out/' + filename.replace('.json', '.html'), html)
     })
 
-В файле `layout.pug` меняем строку: ``
+В файле `layout.pug` меняем строку: `h2 #{name} #[span.age= calcAge(birth)]`
