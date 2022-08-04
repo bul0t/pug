@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    /* justify-content: center; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 120%;
+}
+
+header
+{
+    width: 100%;
+    text-align: center;
+    background: lightskyblue;
+    color: white;
+}
+
+.wrap-content {
+    width: 1200px;
+    text-align: center;
+}
+blockquote {
+    font-style: italic;
+    color: #464646;
+}
+.age {
+    color: #646464;
+    font-size: 45%;
+    position: relative;
+    top: -13px;
+    cursor: help;
+}
+
+footer
+{
+    font-size: 15px;
+    color: #505050;
+}
