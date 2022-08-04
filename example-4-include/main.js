@@ -5,4 +5,4 @@ const pug = require('pug')
 // console.log(pug.renderFile('layout/layout.pug'))
 
 // Или создаём HTML-файл
-fs.writeFileSync('index.html', pug.renderFile('layout/pages/layout.pug'))
+fs.writeFileSync('index.html', pug.renderFile('layout/pages/layout.pug', { basedir: 'layout'}))

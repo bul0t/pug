@@ -73,4 +73,27 @@
       include ../style.css
 
 ## Относительный/абсолютный пути
-Все пути к файлам расчитываются относительно файла `example/layout/layout.pug` и если мы например перенесём этот файл в `example/pages/layout.pug`, то все пути придется переписывать. Чтобы это не происходило, нужно указать базовую директорию.
+Все пути к файлам расчитываются относительно файла `example/layout/layout.pug` и если мы например перенесём этот файл в `example/pages/layout.pug`, то все пути придется переписывать. Чтобы это не происходило, нужно указать базовую директорию от которого будет отчитываться абсолютный путь.
+
+Файл `main.js`:
+
+    fs.writeFileSync('index.html', pug.renderFile('layout/pages/layout.pug', { basedir: 'layout' }))
+
+Файл `layout.pug`:
+
+    include /includes/mixins
+
+    doctype html
+    html
+        head
+            include /includes/head
+            title Заголовок
+            style
+            include ../../style.css
+            // или include /../style.css
+        body
+            include /includes/header
+            p Абзац
+            +helloWorld
+
+В объекте `{ basedir: 'layout' }` можно указывать ключевые слова, например `basedir`, а также добавлять свой данные которые можно использоватьв разметке pug `{ basedir: 'layout', a: 3 }`.

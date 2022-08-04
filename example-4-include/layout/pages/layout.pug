@@ -1,0 +1,13 @@
+include /includes/mixins
+
+doctype html
+html
+  head
+    include /includes/head
+    title Заголовок
+    style
+      include /../style.css
+  body
+    include /includes/header
+    p Абзац
+    +helloWorld
