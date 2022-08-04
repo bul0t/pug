@@ -1,0 +1,13 @@
+extends base
+
+//- создаём миксин
+mixin user(userData)
+    div
+        a.user(href=userData.id + '.html')= userData.name
+
+block content
+    h3 Пользователи
+
+    //- передаем в миксин элемент из массива users
+    each user in users
+        +user(user)

@@ -117,7 +117,8 @@ fs.writeFileSync() - записывает данные в файл, создаё
 Вместо цикла `for` для оптимизации производительности, можно использовать функции `compile()` и `compileFile()`.
 
 ## Функции compile() и compileFile()
-compileFile() - заранее открывает файл и считывает разметку.
+render используем когда нужно сделать операцию один раз.  
+compileFile() - заранее открывает файл и считывает разметку.  
 pug.compile('p Абзац') - работает со строками, как render()
 
     let compileFunc = pug.compileFile('layout.pug');
