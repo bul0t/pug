@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    /* justify-content: center; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 120%;
+}
+img {
+    width: 300px;
+}
+
+/* Анимация логотипа */
+#logotype {
+    max-width: 800px;
+}
+#logotype .dot
+{ 
+    transform-origin: 50% 50%;
+    animation-delay: 0s;
+}
+#logotype .dot--bottom,
+#logotype .dot--top
+{
+    animation: dotAnim 2s infinite;
+}
+#logotype .dot--center
+{
+    animation: dotCenterAnim 1s infinite alternate;
+}
+@keyframes dotCenterAnim
+{
+    from    { opacity: 1; }
+    to      { opacity: 0; }
+}
+@keyframes dotAnim
+{
+    from    { transform: rotate(0); }
+    to      { transform: rotate(360deg); }
+}
